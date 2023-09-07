@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>カットラインとは｜Illustratorでパスを作成する方法｜{shop_name}</title>
+        <meta name="description" content="カットラインとは、印刷物を切り抜く時にカットする場所を示すための線のことです。主にロゴやイラストに沿った形のグッズを制作したい際に必要です。Illustratorの「ペンツール」や「画像トレース機能」を使用すると作成しやすいです。" />
+        <!-- パンくずJSON-LD｜ここから -->
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item": {
+                            "@id": "{base_url}",
+                            "name": "{bread_shop_name}"
+                        }
+                    }
+                ]
+            }
+        </script>
+        <!-- パンくずJSON-LD｜ここまで -->
+        {custom_header} {shop_header} {custom_css} {shop_css}
+        <style>
+            /*---目次はここから---*/
+            .column-index {
+                margin: 2rem 0;
+                padding: 1.5rem;
+                color: #444;
+                background-color: #f2f2f2;
+            }
+
+            .column-index__heading {
+                text-align: center;
+                font-size: 1.1rem;
+                margin: 0;
+                color: #444;
+                font-weight: bold;
+            }
+
+            .column-index__number {
+                background-color: #3e3a39;
+                border-radius: 50px;
+                color: #fff;
+                font-size: 0.8rem;
+                display: inline-block;
+                width: 35px;
+                margin-right: 0.8rem;
+                line-height: 1.2rem;
+                vertical-align: text-top;
+                text-align: center;
+            }
+
+            .column-index ul {
+                list-style: none;
+                margin: 0;
+                padding: 1rem 0 0;
+            }
+
+            .column-index ul li {
+                padding: 0.4rem 0;
+                border-bottom: 1px dotted #c5c5c5;
+            }
+
+            .column-index ul li span {
+                font-size: 1.5rem;
+                line-height: 0;
+            }
+
+            .column-index .ul_sub {
+                padding: 0 0 0 1rem;
+            }
+
+            .column-index .ul_sub li {
+                padding: 0.2rem 0;
+                border: none;
+            }
+
+            .column-index ul a {
+                cursor: pointer;
+                color: #444;
+            }
+
+            .column-index ul a:hover {
+                text-decoration: underline;
+            }
+
+            /*---目次はここまで---*/
+            a:hover {
+                opacity: 0.7;
+            }
+
+            .column_top_image {
+                aspect-ratio: 77/34;
+            }
+
+            .page_h4 {
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        {shop_body_start}
+        <div class="container">
+            <div id="overlay"></div>
+            <div class="editable" data-editable="shop_header_menu">{shop_header_menu}</div>
+            <div id="contents" class="editable" data-editable="page|index">
+                <div id="menu_left" class="editable" data-editable="shop_side_menu">{shop_side_menu}</div>
+                <div id="main">
+                    <!-- パンくずリスト｜ここから -->
+                    <div class="nav-wrapper">
+                        <div class="parent">
+                            <a href="/">{bread_shop_name}</a><span>&gt;</span> <a href="/page/column">コラム</a><span>&gt;</span>
+                            <div class="child">カットラインとは｜Illustratorでパスを作成する方法</div>
+                        </div>
+                    </div>
+                    <!-- パンくずリスト｜ここまで -->
+
+                    <h1 class="page_h1 z-depth-1 mb-3">カットラインとは｜Illustratorでパスを作成する方法</h1>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_top.png" alt="カットラインとは_トップ画像" class="width-full column_top_image" />
+                    <p class="mt-1">
+                        印刷物を切り抜く際に、カットする場所を示すための線のことを「カットライン」と言います。「カットパス」「仕上がり線」と呼ばれることもあります。<br />
+                        等身大パネル、シール、マグネットステッカーなどの商品で、ロゴやイラストに沿った形のグッズを作りたい際はカットラインが必要です。<br />
+                        今回は、Adobe Illustrator（イラストレーター）の「ペンツール」や「画像トレース機能」を用いて、カットラインを作成する方法を解説します。
+                    </p>
+
+                    <!--目次 start-->
+                    <div class="column-index">
+                        <p class="column-index__heading">～目次～</p>
+                        <ul>
+                            <li>
+                                <span>» </span><a class="bold-text" href="#creating_cut_lines">Illustrator（イラレ）でカットラインを作成する手順</a>
+                                <ul class="ul_sub">
+                                    <li>ー <a href="#using_image_trace">画像トレース機能を使用する</a></li>
+                                    <li>ー <a href="#using_pen_tool">ペンツールを使用する</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>» </span><a class="bold-text" href="#points_of_making_cut_lines">カットラインを作るときの注意点</a>
+                                <ul class="ul_sub">
+                                    <li>ー <a href="#checking_data_creation">データ作成に関する案内を確認する</a></li>
+                                    <li>ー <a href="#checking_angles_shapes">角度や形状を確認する</a></li>
+                                </ul>
+                            </li>
+                            <li><span>» </span><a class="bold-text" href="#link_summary">まとめ</a></li>
+                        </ul>
+                    </div>
+                    <!--目次 end-->
+
+                    <!---Illustrator（イラレ）でカットラインを作成する手順 ｜ここから-->
+                    <h2 class="page_h2 z-depth-1 mt-5" id="creating_cut_lines">Illustrator（イラレ）でカットラインを作成する手順</h2>
+                    <p>Illustratorを使用してカットラインを作る手段はいくつかありますが、今回は「画像トレース」機能を用いた作り方と、「ペンツール」を用いた作り方の２種類を紹介します。</p>
+
+                    <!--画像トレース機能を使用する｜ここから-->
+                    <h3 class="page_h3 mt-4" id="using_image_trace">画像トレース機能を使用する</h3>
+                    <p>「画像トレース」機能を使用すると、他の方法よりも簡単にカットパスを作成しやすいです。</p>
+
+                    <h4 class="page_h4 mt-4">①カットパスを作る前の準備</h4>
+                    <p>
+                        カットパスを作成したいデザインのコピーを作成し、元デザインとレイヤーを分けて前面に配置します。<br />
+                        元のデザインのレイヤーは非表示にしておきます。<br />
+                        前面コピーはショートカットキーを用いて簡単に行うことができます。 <br />
+                        Macの場合は「Command+C→Command+F」、Windowsの場合は「option+C→option+F」を使用します。
+                    </p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_1.png" alt="カットパスを作る前の準備_レイヤーを分けて前面に配置" class="width-full" />
+
+                    <h4 class="page_h4 mt-4">②カットラインを作りたいイラストを選択する</h4>
+                    <p>カットラインを作成したいイラストをクリックし、「ウィンドウ」から「画像トレース」を選択すると画像トレースのパネルが出てきます。</p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_2.png" alt="カットラインを作り方イラストを選択する" class="width-full" />
+
+                    <h4 class="page_h4 mt-4">③「シルエット」を選び黒色へ変換</h4>
+                    <p>「プリセット」メニューから「シルエット」を選択すると、イラストが黒色に塗りつぶされます。</p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_3.png" alt="「シルエット」を選び黒色へ変換" class="width-full" />
+
+                    <h4 class="page_h4 mt-4">④作業を実行し、確定させる</h4>
+                    <p>
+                        コントロールパネル内の「拡張」を選択します。<br />
+                        「オブジェクト」から「分割・拡張」を選択しても同様の結果になります。
+                    </p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_4.png" alt="作業を実行し確定させる" class="width-full" />
+                    <p>
+                        ※イラストに白いままの部分が残ってしまった際は、余分にカットラインができないよう間を黒で塗りつぶします。黒く塗りつぶされたシルエットの上で右クリックし、「グループ解除」→「複合パスを解除」をします。<br />
+                        その後、「ウィンドウ」→「パスファインダー」を選び、「合体」を選択すると白い部分が黒く塗りつぶされます。
+                    </p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_5.png" alt="イラストが残らないように塗りつぶす" class="width-full" />
+
+                    <h4 class="page_h4 mt-4">⑤カットラインの完成</h4>
+                    <p>ツールバーで塗りの色を無くし、線を黒い状態にすればカットラインの完成です。</p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_6.png" alt="カットラインの完成" class="width-full" />
+                    <!--画像トレース機能を使用する｜ここまで-->
+
+                    <!--ペンツールを使用する｜ここから-->
+                    <h3 class="page_h3 mt-4" id="using_pen_tool">ペンツールを使用する</h3>
+                    <p>ペンツールでイラストの輪郭をトレースし、カットパスを作成する方法もあります。</p>
+                    <p>「レイヤー」ウインドウから新規レイヤーを追加し、元のレイヤーとは違うレイヤーで作業を行いましょう。</p>
+                    <p>トレースを行いカットパスが完成したら、パスが全て繋がっている状態であるかを確認しましょう。元のイラストと重ならないように注意し、滑らかな曲線を使ったカットパスを作ると裁断も綺麗に仕上がります。</p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_7.png" alt="ペンツールを使用してカットパスを作成する" class="width-full" />
+                    <p>
+                        ペンツールで作ったパスが滑らかでない場合は調整を行うと良いでしょう。カットラインを滑らかにしたい場合は、ライブコーナーウィジェットを使う方法があります。ダイレクト選択ツール(ショートカットキーはA)で丸くしたい角をクリックすると、コーナーに丸い点(ライブコーナーウィジェット)が表示されます。この点をドラッグすると簡単に角丸にすることが可能です。<br />
+                        丸い点(ライブコーナーウィジェット)をダブルクリックするとダイアログ画面が開き、任意の値の角丸にすることができます。
+                    </p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_8.png" alt="ペンツールで作成したカットパスは角を丸くする" class="width-full" />
+                    <!--ペンツールを使用する｜ここまで-->
+                    <!---Illustrator（イラレ）でカットラインを作成する手順 ｜ここまで-->
+
+                    <!---カットラインを作るときの注意点 ｜ここから-->
+                    <h2 class="page_h2 z-depth-1 mt-5" id="points_of_making_cut_lines">カットラインを作るときの注意点</h2>
+                    <p>カットラインの幅や数について決まりを設けている印刷会社もあります。規定に沿ってデータが作成されていないと再入稿が必要となり、手元に商品が届くのが遅れてしまうこともあるため、各印刷会社のガイドを確認してからデータを入稿すると良いでしょう。</p>
+                    <!---データ作成に関する案内を確認する ｜ここから-->
+                    <h3 class="page_h3 mt-4" id="checking_data_creation">データ作成に関する案内を確認する</h3>
+                    <p>
+                        「元のデザインとカットラインの間を〇mm開けてください」という決まりがある印刷会社もあります。<br />
+                        デザインとの間を開けてカットラインを作成したい場合は「ウインドウ」→「プロパティ」の「アピアランス」から「線」の数値を設定します。デザインとカットラインの間を10ｍｍにしたい場合は「線」の数値の欄に、希望する値の2倍の「20ｍｍ」を入力します。
+                    </p>
+                    <p>
+                        そうすると、カットパスの外側と内側に10ｍｍずつ輪郭が作成されます。<br />
+                        作成された太い輪郭を選択し、「オブジェクト→パス→パスのアウトライン」を選択します。中の間が空いた部分を削除し、塗りから線へ変更します。
+                    </p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_9.png" alt="デザインとの間をあけてカットラインを作成する" class="width-full" />
+                    <p>
+                        印刷会社によってはカットの際に数ミリ程ずれてしまう場合があります。デザインがカットラインよりも大きく作られていない場合、余白が見える状態に裁断されてしまう可能性があります。デザインがカットパスの端まである場合は、外側に塗り足しを10ｍｍ程度作ると良いでしょう。<br />
+                        ※印刷会社の指定の幅がある場合、データ不備として返ってきたり希望する位置でカットしてもらえなかったりする場合があるため注意しましょう。
+                    </p>
+                    <!---データ作成に関する案内を確認する ｜ここまで-->
+                    <!---角度や形状を確認する ｜ここから-->
+                    <h3 class="page_h3 mt-4" id="checking_angles_shapes">角度や形状を確認する</h3>
+                    <p>裁断後の仕上がりで、角が尖っていると怪我の原因になる可能性があります。複雑な形状にせず、丸みのある滑らかな曲線のカットラインを作成しましょう。また、90度未満の鋭角な線は仕上がりが綺麗になりにくく、印刷機のエラーに繋がる場合もあるため注意しましょう。</p>
+                    <img src="{img_path_shop}/column/clm_ai_cutline_10.png" alt="90度未満の鋭角になっていないか確認する" class="width-full" />
+                    <p>印刷会社によってはカットラインの数によって金額が変わってしまう場合があります。価格だけでなく仕上がりにも影響するため、カットラインの数を意識して確認すると良いでしょう。</p>
+                    <!---角度や形状を確認する ｜ここまで-->
+
+                    <!---カットラインを作るときの注意点 ｜ここまで-->
+
+                    <!--まとめ｜ここから-->
+                    <h2 class="page_h2 z-depth-1 mt-5" id="link_summary">まとめ</h2>
+                    <p>
+                        カットラインを作成することで、等身大パネル、シール、マグネットステッカーなどの商品を指定した形にカットしてもらうことが可能です。<br />
+                        ペンツールで輪郭をなぞるシンプルな方法や、画像トレース機能を活用した比較的簡単な方法でカットラインを作ることが可能です。<br />
+                        印刷会社ごとにルールが異なり、パスの数などに規定がある場合もあります。注文する前に「データ作成ガイド」に目を通し、データ作成の際の注意点を確認しておくと良いでしょう。
+                    </p>
+                    <p>オリジナルグッズを作る際に、ロゴやイラストに沿ってカットを依頼したい場合は、今回紹介した方法でカットラインを作成してみてください。</p>
+                    <!--まとめ｜ここまで-->
+
+                    {shop_footer}
+                </div>
+                <!-- main/ -->
+            </div>
+            <!-- contents/ -->
+        </div>
+        <!-- container/ -->
+        {js} {custom_js} {shop_js}
+    </body>
+</html>

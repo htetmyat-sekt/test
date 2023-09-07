@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>知って得する！のぼり情報をご紹介！</title>
+        <meta name="description" content="のぼりの色の効果で売り上げアップ！" />
+        <!-- パンくずJSON-LD｜ここから -->
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item": {
+                            "@id": "{base_url}",
+                            "name": "{bread_shop_name}"
+                        }
+                    }
+                ]
+            }
+        </script>
+        <!-- パンくずJSON-LD｜ここまで -->
+        {custom_header} {shop_header} {custom_css} {shop_css}
+        <style>
+            .black-border-box {
+                border: 1px solid gray;
+                display: block;
+                margin: 0 auto;
+                width: 30%;
+                text-align: center;
+                padding: 0.5rem;
+            }
+
+            @media screen and (max-width: 600px) {
+                .black-border-box {
+                    width: 70%;
+                }
+            }
+
+            .border-white-box {
+                border-radius: 4px;
+                padding: 0.7rem 0.5rem;
+                color: black;
+                display: block;
+                text-align: center;
+                font-weight: bold;
+                background-color: white;
+                box-shadow: 2px 2px 5px 1px rgba(163, 163, 163, 0.5);
+            }
+
+            .nobori-introduction {
+                background-color: #efefef;
+                padding: 1.5rem 0.5rem;
+            }
+
+            .nobori-introduction-small-text {
+                font-size: 0.95rem;
+            }
+
+            .light-mds {
+                display: block;
+                margin: 0 auto;
+                width: 25px;
+                margin-top: 4rem;
+            }
+
+            .recommendation-column {
+                border-top: 1px dashed gray;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+            }
+
+            .recommendation-column-title {
+                display: block;
+                margin: 0 auto;
+                padding: 0 0.3rem;
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+
+            .column-detail-box {
+                border: 1px solid gray;
+                padding: 1rem 1rem 0rem 1rem;
+                margin-bottom: 2rem !important;
+            }
+
+            .width-small {
+                margin-top: 0.8rem;
+            }
+
+            @media screen and (max-width: 600px) {
+                .width-small {
+                    width: 100%;
+                }
+            }
+
+            .sharin-box {
+                border: 1px solid gray;
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .bold-large-text {
+                padding-bottom: 0.5rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+                border-bottom: 1px dashed black;
+            }
+
+            .border-white-box:hover {
+                opacity: 0.7;
+            }
+
+            .title-text {
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: white;
+                background-color: #3e3a39;
+                margin-bottom: 0;
+                padding: 0.5rem;
+                width: 100%;
+            }
+
+            .new-margin {
+                padding: 0rem 0.75rem;
+            }
+
+            @media screen and (max-width: 768px) {
+                .new-margin {
+                    padding: 0rem;
+                }
+            }
+
+            .new-margin .col {
+                padding: 0.5rem 0.8rem !important;
+            }
+
+            .link-text {
+                font-size: 0.9rem;
+                /*text-decoration: underline;*/
+            }
+
+            .link-text:hover {
+                text-decoration: underline;
+            }
+
+            .link-underline {
+                color: #3e3a39;
+                font-weight: bold;
+            }
+
+            .link-underline:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        {shop_body_start}
+        <div class="container">
+            <div id="overlay"></div>
+            <div class="editable" data-editable="shop_header_menu">{shop_header_menu}</div>
+            <div id="contents" class="editable" data-editable="page|index">
+                <div id="menu_left" class="editable" data-editable="shop_side_menu">{shop_side_menu}</div>
+                <div id="main">
+                    <!-- パンくずリスト｜ここから -->
+                    <div class="nav-wrapper">
+                        <div class="parent">
+                            <a href="/">{bread_shop_name}</a><span>&gt;</span>
+                            <div class="child">知って得する！のぼり情報をご紹介！</div>
+                        </div>
+                    </div>
+                    <!-- パンくずリスト｜ここまで -->
+
+                    <!--<h1 class="page_h1 z-depth-1">知って得する！のぼり情報をご紹介！</h1>-->
+                    <h1 class="title-text mt-4">知って得する！のぼり情報をご紹介！</h1>
+                    <p class="nobori-introduction-small-text mt-3">のぼりの効果的なデザインとは…？オリジナルのぼりをご検討されている多くのお客様の悩みです。ここでは、デザインのコツや効果的な設置方法、さらには基礎知識まで知って得する情報をご紹介いたします！</p>
+                    <div class="nobori-introduction">
+                        <p class="bold-large-text center mt-2 mb-4">カテゴリ一覧</p>
+                        <div class="row row--large-margin row--full-width row--align-height new-margin">
+                            <div class="col s6 m6 l4 mt-1">
+                                <a href="#link_recommended_columns" class="border-white-box"> 知っておきたいおすすめコラム </a>
+                            </div>
+                            <div class="col s6 m6 l4 mt-1">
+                                <a href="#link_basic_knowledge" class="border-white-box"> のぼり旗の基礎知識 </a>
+                            </div>
+                            <div class="col s6 m6 l4 mt-1">
+                                <a href="#link_installation_method" class="border-white-box"> 設置方法 </a>
+                            </div>
+                            <div class="col s6 m6 l4 mt-1">
+                                <a href="#link_design_tips" class="border-white-box"> デザインのコツ </a>
+                            </div>
+                            <div class="col s6 m6 l4 mt-1">
+                                <a href="#link_nobori_effect" class="border-white-box"> のぼりの効果 </a>
+                            </div>
+                            <div class="col s6 m6 l4 mt-1">
+                                <a href="#link_printing_process_method" class="border-white-box"> 印刷・加工方法 </a>
+                            </div>
+                            <div class="col s6 m6 l4 mt-1">
+                                <a href="#link_usage_scene" class="border-white-box"> 使用シーン別のぼりの使い方 </a>
+                            </div>
+                            <div class="col s6 m6 l4 mt-1">
+                                <a href="#link_other_product" class="border-white-box"> のぼり以外の商品 </a>
+                            </div>
+                            <div class="col s6 m6 l4 mt-1"></div>
+                        </div>
+                    </div>
+
+                    <img src="{img_path_shop}/column/column_mds.png" alt="light-bulb" loading="auto" class="light-mds" />
+                    <fieldset class="recommendation-column" id="link_recommended_columns">
+                        <legend class="recommendation-column-title">知っておきたいおすすめコラム</legend>
+                    </fieldset>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/differences" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">これで解決！のぼりと横断幕・懸垂幕の違いは何？</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                飲食店などの宣伝やスポーツの応援を行う際、欠かせないのがのぼり旗と横断幕です。では、この二つの違いはいったい何なのでしょうか？今回はのぼり旗と横断幕、それぞれの違いと効果についてお話いたします！
+                                <a href="/column/differences" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_nobori_maku.png" alt="これで解決！のぼりと横断幕・懸垂幕の違いは何？" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/color_effect" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりの色の効果で売り上げアップ！</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり旗を作る際に意識するべきことはいろいろありますが、中でも重要なのはお店の雰囲気を表しているかどうかです。今回は雰囲気を表すためには欠かせないのぼり旗の色についてご紹介いたします！
+                                <a href="/column/color_effect" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_color.png" alt="のぼりの色の効果で売り上げアップ！" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/installation_method" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりのパワーを最大限に発揮！効果的な設置方法と固定方法</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                宣伝にぴったりののぼり旗ですが、風の影響などでポールにのぼりが絡まったり倒れてしまっては何の意味もありません。そこで今回はのぼりの最適な設置方法とおすすめの固定方法についてご紹介します！
+                                <a href="/column/installation_method" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_nobori_kotei.png" alt="のぼりのパワーを最大限に発揮！効果的な設置方法と固定方法" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/four_points" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">オンリーワンの魅力・こだわりをのぼりに！オリジナルのぼり作りの4つのポイント♪</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり旗を作る際に、どうせなら細部までこだわったのぼり旗が欲しい！という方はたくさんいらっしゃるかと思います。今回はのぼり旗を作る際に役に立つ、デザインの4つのポイントについてお話しします！
+                                <a href="/column/four_points" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_kodawari.png" alt="オンリーワンの魅力・こだわりをのぼりに！オリジナルのぼり 作りの4つのポイント♪ " loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <!--目立つ色と配色の選び方！看板の集客効果を上げる色とは？-->
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/choose_colors" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">目立つ色と配色の選び方！看板の集客効果を上げる色とは？</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり旗や看板などの販促物を、集客力のある目立つデザインにするためのポイントを簡単にお伝えしています。誘目性や視認性・色や配色と背景の組み合わせなどを正しく理解し、目的に合わせた最適なデザインを見つけてください。
+                                <a href="/column/choose_colors" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_outstandingcolor_top.png" alt="目立つ色と配色の選び方" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <img src="{img_path_shop}/column/column_mds.png" alt="light-bulb" loading="auto" class="light-mds" />
+                    <fieldset class="recommendation-column" id="link_basic_knowledge">
+                        <legend class="recommendation-column-title">のぼり旗の基礎知識</legend>
+                    </fieldset>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/ponji" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼり旗の定番生地！ポンジとは</p>
+                            </a>
+                            <p class="mt-3 mb-1">
+                                現在使われているのぼりのほとんどがポンジで作られています。薄くて軽く、発色がいいのがメリットです。そんなポンジ生地について解説します！<br />
+                                <a href="/column/ponji" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 mt-3">
+                            <img src="{img_path_shop}/column/column_ponji.jpg" alt="のぼり旗の定番生地！ポンジとは" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/nobori_lining" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">知らなきゃ損！？のぼりの裏抜けについてわかりやすく徹底解説</p>
+                            </a>
+                            <p class="mt-3 mb-1">
+                                街中ののぼりを見て、色が薄いなと思ったことはありませんか？これはのぼり旗の裏面の色が薄いためで、要するに裏返った状態でのぼり旗が見えているのです。今回はのぼりを裏側から見たときのデザインの見え方「裏抜け」についてご紹介いたします！
+                                <a href="/column/nobori_lining" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 mt-3">
+                            <img src="{img_path_shop}/column/column_img_uranuke.png" alt="知らなきゃ損！？のぼりの裏抜けについてわかりやすく徹底解説" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/colorful_type" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼり旗の種類やサイズ・形による違いを画像とともに解説！</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                「のぼり」と聞いて、皆さんはどのような形、どのくらいのサイズを思い浮かべるでしょうか？実は定番サイズ以外でものぼり旗には様々な形のものがあります。今回は定番ののぼりから一風変わった形ののぼりまでいろいろな種類ののぼり旗をご紹介いたします！
+                                <a href="/column/colorful_type" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2">
+                            <img src="{img_path_shop}/column/colum_type_top_re.png" alt="のぼり旗の種類やサイズ・形による違いを画像とともに解説！" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/nobori_and_wheels" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりと車輪のこと</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり旗と車輪、一見何も関わりなどないように思えるこのふたつですが、実は意外な共通点があったりします。ともに古くからある物ですが、どのような共通点があるのか見ていきましょう。
+                                <a href="/column/nobori_and_wheels" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2">
+                            <img src="{img_path_shop}/column/column_img_nobori_wheel.png" alt="のぼりと車輪のこと " loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <img src="{img_path_shop}/column/column_mds.png" alt="light-bulb" loading="auto" class="light-mds" />
+                    <fieldset class="recommendation-column" id="link_installation_method">
+                        <legend class="recommendation-column-title">設置方法</legend>
+                    </fieldset>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/customer_attraction" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">【２階店舗の集客術５つ】今からできる空中階でも満席にする秘訣</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                どうしても集客率が悪いイメージのある2階の店舗ですが、ちょっと工夫するだけで簡単に集客力を上げることができます！今回は既にお店を出店している人はもちろん、これから出店を考えている人にも役に立つ店舗の集客方法を一挙公開します！
+                                <a href="/column/customer_attraction" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2">
+                            <img src="{img_path_shop}/column/column_img_manseki.png" alt="【２階店舗の集客術５つ】今からできる空中階でも満席にする秘訣" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <img src="{img_path_shop}/column/column_mds.png" alt="light-bulb" loading="auto" class="light-mds" />
+                    <fieldset class="recommendation-column" id="link_design_tips">
+                        <legend class="recommendation-column-title">デザインのコツ</legend>
+                    </fieldset>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/ten_stylish_designs" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">おしゃれなデザインのぼりで集客！デザイン例とポイントを解説</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり旗を作成する際に、「どんなデザインにしたらよいのかわからない」と悩む方は多いのではないでしょうか？そんな方のために今回はテーマや商品に合わせたデザインテンプレートを多数ご用意いたしました！
+                                <a href="/column/ten_stylish_designs" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2">
+                            <img src="{img_path_shop}/column/fashionable_nobori.jpg" alt="おしゃれなデザインのぼりで集客！デザイン例とポイントを解説" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/copy_write" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりの文言を工夫して集客する！魅力的なキャッチコピー40選</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり旗を作るうえで欠かせないのがのぼり旗に書く「キャッチコピー」です。特にお客様に「このサービス/商品はお得だ」と思わせるようなコピーには方法がいくつか存在します。
+                                <a href="/column/copy_write" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_copy.png" alt="のぼりの文言を工夫して集客する！魅力的なキャッチコピー40選" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/photo_with_nobori" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">写真入りのぼり旗でアピールしよう！写真を使うメリットと作成時のポイント</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                写真入りののぼり旗は文字だけののぼり旗と比べて、イメージがわきやすく集客効果にすぐれています。写真や生地にこだわって作られたのぼり旗は、店主の思いが込められています。こだわりが詰め込まれたオリジナリティー溢れるのぼり旗でお店をアピールしましょう。
+                                <a href="/column/photo_with_nobori" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_photo_top.png" alt="写真入りのぼり旗でアピールしよう！写真を使うメリットと作成時のポイント" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/sports_festivals" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">体育祭などで使える！学級旗デザインを考えるうえでのポイントをご紹介</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                体育祭などで使える学級旗デザインのポイントを解説しています。学級旗のデザインは、まずコンセプトやクラスカラーを決め、後から背景色や文字などの細かい設定を行うことで、統一感のある目立つデザインになります。<br />
+                                <a href="/column/sports_festivals" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/gakkyuuhata_design_top.png" alt="学級旗デザイン" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <!--<div class="row row--large-margin column-detail-box">
+                    <div class="col s12 m9">
+                        <a href="/column/choose_colors" class="link-underline">
+                            <p class="bold-text large-text mb-1 mt-2">目立つ色と配色の選び方！看板の集客効果を上げる色とは？</p>
+                        </a>
+                        <p class="mt-2 mb-1">
+                            のぼり旗や看板などの販促物を、集客力のある目立つデザインにするためのポイントを簡単にお伝えしています。誘目性や視認性・色や配色と背景の組み合わせなどを正しく理解し、目的に合わせた最適なデザインを見つけてください。<br>
+                            <a href="/column/choose_colors" class="link-text">この記事を読む</a>
+                        </p>
+                    </div>
+                    <div class="col s12 m3 mt-3">
+                        <img src="{img_path_shop}/column/column_outstandingcolor_top.png" alt="目立つ色と配色の選び方" loading="auto" class="width-full">
+                    </div>
+                </div>-->
+
+                    <img src="{img_path_shop}/column/column_mds.png" alt="light-bulb" loading="auto" class="light-mds" />
+                    <fieldset class="recommendation-column" id="link_nobori_effect">
+                        <legend class="recommendation-column-title">のぼりの効果</legend>
+                    </fieldset>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/psychological_effect" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりの心理的効果</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                人は買い物をする際、いわゆる「お買い得感」に弱いと言われています。代表的なのは大安売りや閉店セールなどといったうたい文句でしょう。のぼり旗を見て商品を買うお客様には少なからず心理的効果が働いています。<br />
+                                <a href="/column/psychological_effect" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_psycho_effect.png" alt="のぼりの心理的効果" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/visit_frequency" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりで来店頻度を上げる</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                例えば減ってしまった来客頻度を上げようとすると、どんな工夫を凝らせばよいでしょうか？店の内装などももちろん大切ですが、のぼり旗を立てることである程度来客頻度が改善されることもあります。<br />
+                                <a href="/column/visit_frequency" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_customer_visit.png" alt="のぼりで来店頻度を上げる" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/increase_visitors" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">来客を増やす方法はのぼりが一番</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                来客を増やすための手段のひとつとして用いられるのぼり旗ですが、なぜこれほどまでにのぼり旗は集客の効果があるのでしょうか？今回はそれについてお話いたします。
+                                <a href="/column/increase_visitors" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_visitors_up.png" alt="来客を増やす方法はのぼりが一番" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/remarkable_reason" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりが目を引く理由</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                情報で溢れかえっている都会の街中に設置してあっても目立つのぼり旗ですが、ではなぜのぼり旗は目立つのでしょう？今回はのぼり旗の目立つ理由についてお話いたします。
+                                <a href="/column/remarkable_reason" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_remarkable.png" alt="のぼりが目を引く理由" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/highlight" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">店はのぼりで目立たせるのが第一歩</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                お客様に商品を買ってもらうことの第一歩として、お店に気づき来店してもらうことから始まります。そのためにもまずはのぼり旗を用いてお店を目立たせる必要があるのです。
+                                <a href="/column/highlight" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_highlight.png" alt="店はのぼりで目立たせるのが第一歩" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/promotional_popular" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">販促用ののぼりが人気の理由</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                近年、オリジナルのぼりを安く早く作ることのできる販促用ののぼり旗が人気です。デザインに関しても自分で作るか、デザインを依頼するかと自由に選べることができるのも人気の理由のひとつなようです。<br />
+                                <a href="/column/promotional_popular" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_promotion.png" alt="販促用ののぼりが人気の理由" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/promotional_tool" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりは販促ツール</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり旗は比較的目に飛び込んできやすい、「目立たせるための販促ツール」です。売れる仕組みを作る上で、まず目立たせるということは非常に重要になってきます。
+                                <a href="/column/promotional_tool" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_promotool.png" alt="のぼりは販促ツール" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/new_acquisition" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">新規のお客さん獲得のためののぼり</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                お店にとって新規のお客様に利用してもらえるかどうかは非常に重要なことのひとつです。店を訪れるお客様の半数は特に計画もなく訪れる方なので、そういったお客様の興味を引くような宣伝を行うことが、最重要課題の一つとなっています。
+                                <a href="/column/new_acquisition" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_newcustomer.png" alt="新規のお客さん獲得のためののぼり" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/digital_signage" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">デジタルサイネージとのぼりの戦い</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                街中でよく見かける電光掲示板やネオンなどの販促物を「デジタルサイネージ」と呼びます。デジタルサイネージとのぼり旗などのアナログの販促物、より効果的なのはどちらなのでしょうか？
+                                <a href="/column/digital_signage" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-3">
+                            <img src="{img_path_shop}/column/column_img_digital.png" alt="デジタルサイネージとのぼりの戦い" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <img src="{img_path_shop}/column/column_mds.png" alt="light-bulb" loading="auto" class="light-mds" />
+                    <fieldset class="recommendation-column" id="link_printing_process_method">
+                        <legend class="recommendation-column-title">印刷・加工方法</legend>
+                    </fieldset>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/printing_method" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりの印刷方法、シルクスクリーン印刷とインクジェット印刷って何？</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり旗を印刷する方法は様々なものがありますが、大きく分けるとインクジェットとシルクスクリーンという方法に分けることができます。今回はこのふたつの印刷方法についてご紹介いたします！
+                                <a href="/column/printing_method" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_insatu.png" alt="のぼりの印刷方法、シルクスクリーン印刷とインクジェット印刷って何？" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/storage_method" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりの正しい収納方法とお手入れの方法</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり旗を持っている人の中で、どれくらい正しい方法で収納やお手入れをしているでしょうか。のぼりは正しい収納方法やお手入れ方法を知らないと、シワになったり寿命が短くなって使い物にならなくなったりする可能性があります。今回はのぼりの正しい収納方法とお手入れ、寿命について紹介します。<br />
+                                <a href="/column/storage_method" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/clmstorage_image.png" alt="のぼりの正しい収納方法とお手入れの方法" loading="auto" class="width-full mt-4" />
+                        </div>
+                    </div>
+
+                    <img src="{img_path_shop}/column/column_mds.png" alt="light-bulb" loading="auto" class="light-mds" />
+                    <fieldset class="recommendation-column" id="link_usage_scene">
+                        <legend class="recommendation-column-title">使用シーン別のぼりの使い方</legend>
+                    </fieldset>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/business_restaurant" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">飲食店向けのぼりの選び方とオリジナルデザインのコツ</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                飲食店を経営している皆さんが必ずと言っていいほど集客に使っているツールといえば「のぼり」です。誰でも簡単に用意できるため、集客アップに繋げるにはオリジナルのぼりが効果的です。サイズやデザインなどに気をつけてお店の個性あふれるのぼりを作りましょう。
+                                <a href="/column/business_restaurant" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/for_restaurant_top.jpg" alt="飲食店向けのぼりの選び方とオリジナルデザインのコツ" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/banner_ad" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">のぼりは一番手軽な広告ツール！効果的な活用方法を紹介</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                お店を宣伝するためには、広告はなくてはならないツールです。その中でも、のぼりは他の媒体と比べて安価で作成することができ、高い費用対効果を得ることが期待できます。より広告効果を高めるためには設置方法やデザインを工夫し、マナーを守ることが重要です。
+                                <a href="/column/banner_ad" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/udon_nobori_top.png" alt="のぼりは一番手軽な広告ツール！効果的な活用方法を紹介" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/regional_events" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">地域イベントにのぼりが必須な深い訳</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                地域イベントにものぼり旗は必須のものとなっています。これはイベントが盛り上がっているように演出するためであり、それを呼び水に人を集めるためでもあるのです。
+                                <a href="/column/regional_events" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_events.png" alt="地域イベントにのぼりが必須な深い訳" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/convenience_store" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">コンビニエンスストアののぼり</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                コンビニエンスストアなどに設置されているのぼり旗は、屋内に入れてあるものも多くあります。ポスターよりも安価で丈夫なのぼり旗は直接壁などに掲示するだけでも十分集客の効果があります。
+                                <a href="/column/convenience_store" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_conveni.png" alt="コンビニエンスストアののぼり" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/kyoto_landscape" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">京都市の景観とのぼり</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                京都市では現在、市内全域で屋外広告に対する基準つくりが進められています。主に電光掲示板など景観にそぐわないものを中心とした規制ですが、のぼり旗もその対象に入っています。
+                                <a href="/column/kyoto_landscape" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_kyoto.png" alt="京都市の景観とのぼり" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/hakone_ekiden" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">箱根駅伝ののぼり</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                お正月の2日と3日で開催される箱根駅伝ですが、コースの応援ルートには必ずと言っていいほどのぼり旗が設置されています。特に声援がかき消されてしまう可能性の高い激戦区では、応援用ののぼり旗がよく設置されています。
+                                <a href="/column/hakone_ekiden" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_hakone.png" alt="映画の宣伝用ののぼり" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/movie_promotion" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">映画の宣伝用ののぼり</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                新しく上映される映画の宣伝でものぼり旗はよく使われています。過去にはのぼり旗による宣伝が話題になった映画もあるようです。最近では1枚からのぼり旗が作れるようになって、より手軽にこういった使い方ができるようになりました。
+                                <a href="/column/movie_promotion" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_movie.png" alt="映画の宣伝用ののぼり" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/tokyo_marathon" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">東京マラソンののぼり</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                毎年開催される東京マラソンは、歴史こそまだ短いですが参加者が抽選方式になるほど人気のあるマラソンです。そんな行事ですから、当然応援する側にも力が入ります。中には10本ほど個人のためののぼり旗を作成、設置する方もいらっしゃるそうです。
+                                <a href="/column/tokyo_marathon" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_tokyomarathon.png" alt="東京マラソンののぼり" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/olympic_invitation" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">東京オリンピック誘致活動用ののぼり</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                2020年に開催される東京オリンピックですが、その誘致活動には数多くののぼり旗が使用されていました。 日本の文化のひとつともいえるのぼり旗を使った行った大規模な宣伝は、少なからず開催地決定の後押しとなったでしょう。
+                                <a href="/column/olympic_invitation" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_olympic.png" alt="東京オリンピック誘致活動用ののぼり" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/pole_disposal" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">【捨てる前にチェック！】のぼり旗・ポールの処分方法から再利用方法まで</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                のぼり・ポールが不要になった場合は処分をしましょう。お店で使用するのぼりは「事業系ごみ」に分別されるため、廃棄業者に回収を依頼するか、処理工場に持ち込む必要があります。最近では、エコの観点からのぼり旗をリサイクルや再利用する動きもあります。
+                                <a href="/column/pole_disposal" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column__pole_top.png" alt="【捨てる前にチェック！】のぼり旗・ポールの処分方法から再利用方法まで" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <img src="{img_path_shop}/column/column_mds.png" alt="light-bulb" loading="auto" class="light-mds" />
+                    <fieldset class="recommendation-column" id="link_other_product">
+                        <legend class="recommendation-column-title">のぼり以外の商品</legend>
+                    </fieldset>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/fashionable_wedding" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">結婚式はタペストリーでおしゃれに！デザイン例と英語フレーズ15選</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                ウェディングタペストリーとは、天井から下げたり、壁などに掛けて使われる結婚式用の布製飾りのことを指します。今回はこのウェディングタペストリーの活用方法とその作り方についてご紹介いたします！
+                                <a href="/column/fashionable_wedding" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_wedding_tape_top.png" alt="結婚式はタペストリーでおしゃれに！デザイン例と英語フレーズ15選" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/maku_string_knot" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">【解説画像あり】簡単なのにほどけにくい！横断幕の紐の結び方3選</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                様々な場所に設置することができる横断幕ですが、それの取り付け方も様々です。今回は横断幕に取り付ける紐の結び方と、それを使った横断幕の簡単な設置方法をご紹介いたします！
+                                <a href="/column/maku_string_knot" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_himo.png" alt="【解説画像あり】簡単なのにほどけにくい！横断幕の紐の結び方3選" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/tape_decoration" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">タペストリーの飾り方3選〜壁もタペストリーも傷つけたくない〜</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                近年種類や数が増えてきたタペストリーですが、意外と飾り方に迷っていらっしゃる方は多いのではないでしょうか？特に飾る際に壁に穴はあけたくないですよね。そこで、今回は壁やタペストリーを傷つけない飾り方をご紹介します。
+                                <a href="/column/tape_decoration" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_img_tape.png" alt="タペストリーの飾り方3選　〜壁もタペストリーも傷つけたくない〜" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/tapestry_for_birthday" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">バースデータペストリーを飾ろう！おしゃれな英語の文章20選</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                バースデータペストリーとは、お子様の誕生日のお祝いや写真を撮る際に飾る布のことを指します。今回はこのバースデータペストリーの作る方法とおしゃれな英語の文章についてご紹介いたします！
+                                <a href="/column/tapestry_for_birthday" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/clm_bday_tape_top_img.jpg" alt="バースデータペストリーを飾ろう！おしゃれな英語の文章20選" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/wrinkles_creases" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">タペストリーのシワや折り目を取る方法|その他注意事項もご紹介</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                この記事では、壁掛けとしてポピュラーなタペストリーを良い状態で長く楽しむために、梱包や保管時の折り目やシワをとる方法、傷や汚れを避けるための設置場所に加え、素材別のお手入れ方法、シワや汚れが付きにくい保管方法を解説しています。
+                                <a href="/column/wrinkles_creases" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/tapestry_siwa.png" alt="タペストリーのシワや折り目を取る方法|その他注意事項もご紹介" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/tapestry_introducing" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">大量のタペストリーを収納する方法について紹介！</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                タペストリーの収納方法に迷っている人必見！さまざまなタペストリーの収納方法を紹介しているので、自分に合った収納方法が見つかります。手軽で手頃に収納できる方法なので要チェック。
+                                <a href="/column/tapestry_introducing" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/tapestrystorage_top.png" alt="大量のタペストリーを収納する方法について紹介！" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/introduction_tapestry_sizes" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">一般的なタペストリーのサイズについてご紹介</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                この記事では一般的なタペストリーのサイズと用途によってどんなサイズを選べばよいかについて説明しています。タペストリーのサイズで迷っている方はぜひご覧ください。
+                                <a href="/column/introduction_tapestry_sizes" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_tapesize_top.png" alt="一般的なタペストリーのサイズについてご紹介" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/what_is_tarpaulin" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">横断幕やタペストリーの生地で使われるターポリンとは？</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                横断幕やタペストリーなどによく使用される生地「ターポリン」。今回はこの「ターポリン」はどういう生地なのか？そのメリットデメリットや用途について詳しく解説します。
+                                <a href="/column/what_is_tarpaulin" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/column_tarpaulin_top.png" alt="横断幕やタペストリーの生地で使われるターポリンとは？" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/self_made_tapestry" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">自作タペストリーの作り方の手順や印刷依頼の方法を解説</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                タペストリーを自作する方法について、材料を集めて1から手作りする場合と、印刷会社に依頼してクオリティの高いものを作る場合の2種類を紹介します。制作時の注意点も踏まえて、タペストリーを自作したい人はぜひご覧ください。
+                                <a href="/column/self_made_tapestry" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/clm_tapestry_jisaku_top.png" alt="自作タペストリーの作り方の手順や印刷依頼の方法を解説" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/self_made_tapestry" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">タペストリーとはどのようなもの？生地や使い方を解説</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                タペストリーは多様なデザインと使い方から室内外の装飾や宣伝に効果を発揮します。本記事ではタペストリーの意味や生地の選び方、作成方法を解説し、目的や用途に合ったオリジナルタペストリーを作成する方法を紹介します。
+                                <a href="/column/what_is_tapestry" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/clm_tapestry_top.png" alt="タペストリーとはどのようなもの？生地や使い方を解説_トップ画像" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                    <div class="row row--large-margin column-detail-box">
+                        <div class="col s12 m9">
+                            <a href="/column/self_made_tapestry" class="link-underline">
+                                <p class="bold-text large-text mb-1 mt-2">神社に設置するのぼり旗の立て方｜意味や使われるサイズも解説</p>
+                            </a>
+                            <p class="mt-2 mb-1">
+                                この記事では、神社ののぼり旗を立てる意味や設置時のポイントについてご紹介しています。これから神社にのぼり旗を設置、寄贈したい方は、ぜひチェックしてみてください。
+                                <a href="/column/shrine_nobori" class="link-text">この記事を読む</a>
+                            </p>
+                        </div>
+                        <div class="col s12 m3 mt-2 center">
+                            <img src="{img_path_shop}/column/clm_shrine_nobori_top.png" alt="神社に設置するのぼり旗の立て方" loading="auto" class="width-full" />
+                        </div>
+                    </div>
+                </div>
+                <!-- main/ -->
+            </div>
+            <!-- contents/ -->
+        </div>
+        <!-- container/ -->
+        {shop_footer} {js} {custom_js} {shop_js}
+    </body>
+</html>

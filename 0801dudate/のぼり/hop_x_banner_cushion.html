@@ -1,0 +1,1203 @@
+<?php
+    $url = $_SERVER['REQUEST_URI'];
+    if (preg_match('[smf]', $url)){
+        $ship_link = ['I590' =>
+'219698','atype' => 'a_type_nobori_smf','typeS' => '174849','easy' => '399952','Tbn' => '174847','big' => '174854','widebig' => '399958','trkpt' => '323728','atype_2' => '411367','atype_3' => '411375','I890' => '276263','X450' => '276265','X600' => '276269','B60' => '219428','C80' => '174851','WIDE' => '276273','RUPB60' => '219429','RUPB85' =>
+'174853','RUPB120' => '219430','loyal_p' => '399977','seamless_p' => '399963','perfect_p' => '399968','stkn' => '319816']; $back_panel_link = 'back_panel_smf'; $x_banner_link = 'x_banner_smf'; $rollup_banner_link = 'roll_up_banner_smf'; $expansion_banner_link = 'expansion_banner_smf'; } if (preg_match('[design]', $url)){ $ship_link = ['I590' =>
+'219697','atype' => 'a_type_nobori_design','typeS' => '174858','easy' => '399953','Tbn' => '174856','big' => '174863','widebig' => '399959','trkpt' => '323729','atype_2' => '411368','atype_3' => '411376','I890' => '276264','X450' => '276266','X600' => '276270','B60' => '219434','C80' => '174860','WIDE' => '276274','RUPB60' => '219435','RUPB85' =>
+'196265','RUPB120' => '219436','loyal_p' => '399978','seamless_p' => '399964','perfect_p' => '399969','stkn' => '319818']; $goods_color = 'green'; $back_panel_link = 'back_panel_design'; $x_banner_link = 'x_banner_design'; $rollup_banner_link = 'roll_up_banner_design'; $expansion_banner_link = 'expansion_banner_design'; } ?>
+<style type="text/css">
+    .mt-0 {
+        margin-top: 0 !important;
+    }
+
+    .mt-1 {
+        margin-top: 0.25rem !important;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem !important;
+    }
+
+    .mt-3 {
+        margin-top: 1rem !important;
+    }
+
+    .mt-4 {
+        margin-top: 3rem !important;
+    }
+
+    .mb-0 {
+        margin-bottom: 0 !important;
+    }
+
+    .mb-1 {
+        margin-bottom: 0.25rem !important;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .pl-4 {
+        padding-left: 3rem !important;
+    }
+
+    .marker_text {
+        background-color: #d3edfb;
+    }
+
+    .container .row.row--med-margin > .col {
+        padding: 0 0.375rem 0.75rem;
+    }
+
+    .container .row.row--full-width {
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+
+    .row.row--align-height {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .row--align-height > .col > * {
+        height: 100%;
+    }
+
+    .row.row--align-height .col {
+        padding: 0 0.8rem 0;
+    }
+
+    .page_cushion_h2 {
+        display: block;
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 1rem !important;
+        padding: 0.5rem 0;
+        padding-left: 1rem;
+        font-weight: bold;
+        font-size: 1.2rem !important;
+        color: #2f2725;
+    }
+
+    .page_cushion_h2::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0.3rem;
+        width: 0.3rem;
+        height: 1.6rem;
+        margin-top: -0.8rem;
+        background-color: #3e3a39;
+    }
+
+    .page_cushion_h3 {
+        padding-left: 0.5rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 2px solid #0080cc;
+        font-weight: bold;
+        font-size: 1.2rem !important;
+        color: #2f2725;
+        margin: 0 0 1.5rem !important;
+    }
+
+    .x_banner_detail_btn {
+        width: 75%;
+        margin: 0 auto;
+        background-color: #005bac;
+        border-radius: 0.3rem;
+        margin-top: 1.5rem;
+    }
+
+    .x_banner_detail_btn:hover {
+        opacity: 0.7;
+    }
+
+    .x_banner_detail_btn a {
+        position: relative;
+        display: block;
+        color: #ffffff;
+        padding: 1rem 0.8rem 1.3rem 3.5rem;
+        border-radius: 0.3rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .x_banner_detail_btn a img {
+        position: absolute;
+        top: 0.7rem;
+        left: 2.5rem;
+        width: 1.3rem;
+    }
+
+    @media only screen and (max-width: 830px) {
+        .x_banner_detail_btn {
+            width: 75%;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .x_banner_detail_btn {
+            width: 80%;
+        }
+
+        .x_banner_detail_btn a img {
+            left: 2rem;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .x_banner_detail_btn {
+            width: 90%;
+        }
+
+        .x_banner_detail_btn a {
+            font-size: 1rem;
+        }
+
+        .x_banner_detail_btn a img {
+            width: 1.1rem;
+            left: 2rem;
+        }
+    }
+
+    /*X バナー（ハトメタイプ）の特徴｜ここから*/
+    .x_banner_features_title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #0080cc;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #0080cc;
+    }
+
+    /*X バナー（ハトメタイプ）の特徴｜ここまで*/
+
+    /*X バナー（ハトメタイプ）の商品一覧｜ここから*/
+    #main .row.goods_type_box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #main .row.goods_type_box > .col {
+        margin-bottom: 1rem;
+    }
+
+    #main .row.goods_type_box > .col:nth-child(3n) {
+        padding-left: 0.5rem;
+        padding-right: 0;
+    }
+
+    #main .row.goods_type_box > .col:nth-child(3n + 2) {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    #main .row.goods_type_box > .col:nth-child(3n + 1) {
+        margin-bottom: 1rem;
+        padding-left: 0;
+        padding-right: 0.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #main .row.goods_type_box > .col:nth-child(3n + 1) {
+            padding-right: 0;
+        }
+
+        #main .row.goods_type_box > .col:nth-child(3n + 2) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        #main .row.goods_type_box > .col:nth-child(3n) {
+            padding-left: 0;
+        }
+    }
+
+    #main .goods_type {
+        height: 100%;
+        border: 1px solid #3e3a39;
+        border-radius: 7px;
+        padding: 0 0.7rem 1.3rem;
+        background-color: #fff;
+    }
+
+    #main .goods_type > a img {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    .color-tag-wrap {
+        margin: 1rem 0 0;
+        height: 80px;
+    }
+
+    .wrap_height {
+        height: 50px;
+    }
+
+    .color-tag-wrap > span {
+        margin-bottom: 0.3rem;
+        margin-right: 0.1rem;
+        padding: 0 0.5rem 0.1rem;
+    }
+
+    .intro-color-tag-wrap > span {
+        margin-bottom: 0.3rem;
+        margin-right: 0.1rem;
+        padding: 0 0.5rem 0.1rem;
+    }
+
+    .variable > .col > .goods_type {
+        position: relative;
+        padding-bottom: 7.5rem !important;
+    }
+
+    .variable .price_btn_wrapper {
+        bottom: 1.3rem;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .light-red-tag {
+        background-color: #fabda6;
+        color: #3e3a39;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .light-orange-tag {
+        background-color: #f4a579;
+        color: #3e3a39;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .light-blue-tag {
+        background-color: #e1f4fc;
+        color: #3e3a39;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .light-yellow-tag {
+        background-color: #fee5ca;
+        color: #3e3a39;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .light-grey-tag {
+        background-color: #dcdddf;
+        color: #3e3a39;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .bold-grey-tag {
+        background-color: #67696b;
+        color: #fff;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .light-green-tag {
+        background-color: #b8d989;
+        color: #3e3a39;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .normal-grey-tag {
+        background-color: #939598;
+        color: #fff;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .bold-blue-tag {
+        background-color: #67b3e3;
+        color: #3e3a39;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+        padding: 0 0.5rem;
+    }
+
+    .bold-green-tag {
+        background-color: #98d4c0;
+        color: #3e3a39;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .light-pink-tag {
+        background-color: #f7abb4;
+        color: #3e3a39;
+        padding: 0 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: inline-block;
+    }
+
+    .banner_title {
+        font-size: 1rem;
+        text-align: center;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.87);
+        padding: 0 0 0.3rem;
+        border-bottom: 1px dashed #3e3a39;
+        margin-top: 0.5rem;
+    }
+
+    .goods_explain_txt {
+        font-size: 0.9rem;
+        text-align: left;
+        margin: 0.3rem 0;
+        line-height: 1.5rem;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .price_txt {
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: #da2128;
+        margin-top: 1.2rem;
+    }
+
+    .price_txt > span {
+        font-size: 0.9rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .price_txt .price_arrow {
+        font-size: 1.3rem;
+        vertical-align: middle;
+    }
+
+    .before_price {
+        color: rgba(0, 0, 0, 0.87);
+        text-decoration: line-through;
+    }
+
+    .before_price > .price_size {
+        font-size: 1.3rem;
+    }
+
+    .product_detail {
+        width: 85%;
+        margin: auto;
+        display: block;
+        padding: 0;
+        border-radius: 7px;
+        background-color: #f36e21 !important;
+    }
+
+    .green_btn {
+        background-color: #388e3c !important;
+    }
+
+    @media only screen and (device-width: 768px) {
+        .color-tag-wrap {
+            height: 130px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        #main a .goods_type > img {
+            max-width: 100%;
+            width: 60%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .light-red-tag,
+        .light-blue-tag,
+        .light-orange-tag,
+        .light-yellow-tag,
+        .light-grey-tag,
+        .bold-grey-tag,
+        .light-green-tag,
+        .normal-grey-tag,
+        .bold-blue-tag,
+        .bold-green-tag,
+        .light-pink-tag {
+            font-size: 0.9rem !important;
+        }
+
+        .banner_title {
+            font-size: 1.2rem;
+        }
+
+        .goods_explain_txt {
+            font-size: 1rem;
+        }
+
+        .wrap_height_sp {
+            height: 50px;
+        }
+    }
+
+    /*X バナー（ハトメタイプ）の商品一覧｜ここまで*/
+
+    /*屋外でも使える「屋内外兼用B60」は表と裏（うしろ）の両面でアピールすることができます！|ここから*/
+    .both_sides_box {
+        position: relative;
+        padding: 1rem 0.5rem;
+        margin: 0.5rem 0 0 !important;
+        border: 0.15rem dotted #3e3a39;
+        border-radius: 8px;
+    }
+
+    .both_sides_box .both_sides_box_title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+        padding-left: 3rem;
+    }
+
+    .both_sides_box .both_sides_box_title img {
+        position: absolute;
+        top: 13px;
+        left: 9px;
+        width: 3rem;
+    }
+
+    .both_sides_box .both_sides_box_wrapper {
+        font-size: 0.9rem;
+        margin: 0.5rem 0 0.25rem;
+        line-height: 1.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .both_sides_box .both_sides_box_title img {
+            top: 15px;
+        }
+
+        .both_sides_box .both_sides_img {
+            width: 70%;
+            display: block;
+            margin: 0.5rem auto;
+        }
+    }
+
+    /*屋外でも使える「屋内外兼用B60」は表と裏（うしろ）の両面でアピールすることができます！|ここまで*/
+
+    /*器具が壊れた…｜ここから*/
+    .banner_fixtures_box {
+        position: relative;
+        padding: 1rem 0.5rem;
+        margin: 1.8rem 0 0 !important;
+        border: 0.15rem dotted #3e3a39;
+        border-radius: 8px;
+    }
+
+    .banner_fixtures_box .banner_fixtures_title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+        padding-left: 3rem;
+    }
+
+    .banner_fixtures_box .banner_fixtures_title img {
+        position: absolute;
+        top: 12px;
+        left: 9px;
+        width: 3.5rem;
+    }
+
+    .banner_fixtures_box .banner_fixtures_wrapper {
+        font-size: 0.9rem;
+        margin: 0.5rem 0 0.25rem;
+    }
+
+    .banner_fixtures_box .banner_fixtures_list a {
+        display: inline-block;
+        padding: 0.3rem 0.5rem;
+        margin: 0.3rem 0 0 1.5rem;
+        border: 1px solid #0166b3;
+        border-radius: 0.3rem;
+        font-weight: bold;
+        color: #0166b3;
+    }
+
+    .banner_fixtures_box .banner_fixtures_img {
+        display: block;
+        margin: auto;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .banner_fixtures_box .banner_fixtures_title img {
+            top: 15px;
+        }
+
+        .banner_fixtures_box .banner_fixtures_img {
+            width: 40%;
+        }
+
+        .banner_fixtures_box .banner_fixtures_list {
+            margin: 0.5rem 0 0 3.5rem;
+        }
+    }
+
+    /*器具が壊れた…｜ここまで*/
+    /*X バナー（ハトメタイプ）の価格・サイズ表｜ここから*/
+    .banner_price_size_table {
+        table-layout: fixed;
+        margin-top: 2rem;
+    }
+
+    .banner_price_size_table th,
+    .banner_price_size_table tr,
+    .banner_price_size_table td {
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .banner_price_size_table thead th:nth-child(1) {
+        background-color: #0081cc;
+        color: #fff;
+        width: 20%;
+    }
+
+    .banner_price_size_table thead th:nth-child(n + 2) {
+        background-color: #d3edfb;
+    }
+
+    .banner_price_size_table thead .blue_cell {
+        background-color: #d3edfb !important;
+        color: rgba(0, 0, 0, 0.87) !important;
+    }
+
+    .banner_price_size_table tbody th:nth-child(1) {
+        text-align: left;
+        background-color: #0081cc;
+        color: #fff;
+        padding: 0.5rem 0.3rem 0.5rem 0.8rem;
+        height: 110px;
+    }
+
+    .banner_price_size_table tbody .grey_cell {
+        background-color: #f6f6f6 !important;
+    }
+
+    .banner_price_size_table thead th:nth-child(2) {
+        width: 30%;
+    }
+
+    .price_table_scroll .table_scroll_img {
+        display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .banner_price_size_table td {
+            padding: 0.5rem;
+        }
+
+        .banner_price_size_table thead th:nth-child(2) {
+            width: 32%;
+        }
+
+        .banner_price_size_table thead th:nth-child(3) {
+            width: 35%;
+        }
+
+        .price_table_scroll {
+            position: relative;
+            overflow: auto;
+        }
+
+        .price_table_scroll .banner_price_size_table {
+            width: 600px;
+        }
+
+        .price_table_scroll .table_scroll_img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+        }
+
+        .price_table_scroll .table_scroll_img.shortsize_table_img.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+
+        .banner_price_size_table .table_tr_name th:first-child {
+            position: sticky;
+            left: 0;
+        }
+    }
+
+    /*X バナー（ハトメタイプ）の価格・サイズ表｜ここまで*/
+    /*その他バナースタンド｜ここから*/
+    .goods_type_box .good_type_wrapper {
+        border: 1px solid #9e9e9e;
+        background-color: #f2f3f4;
+        border-radius: 7px;
+    }
+
+    .good_type_wrapper .good_type_title {
+        background-color: #0166b3;
+        color: #fff;
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        position: relative;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+
+    .good_type_wrapper .good_type_title .small-text {
+        font-size: 0.9rem;
+    }
+
+    .good_type_wrapper .good_type_title.black-back {
+        background-color: #3e3e3f;
+        color: #fff;
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        position: relative;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+
+    .good_type_wrapper .goods_type_padding {
+        padding: 0.5rem;
+    }
+
+    .good_type_wrapper .goods_type_paragraph {
+        border-bottom: 1px dashed #3e3a39;
+        padding-bottom: 0.8rem;
+        margin-bottom: 0.5rem;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .good_type_wrapper .goods_type_paragraph.three-text {
+        padding-bottom: 2.2rem;
+    }
+
+    .enn-text {
+        position: relative;
+    }
+
+    .enn-text:before {
+        position: absolute;
+        content: '～';
+        left: 4px;
+        top: -12px;
+    }
+
+    .go-to-type-list-btn {
+        text-align: center;
+        font-size: 0.9rem;
+        width: 90%;
+        padding: 0.3rem;
+        margin: auto;
+        margin-top: 0.8rem;
+        margin-bottom: 0.5rem;
+        display: block;
+        border-radius: 20px;
+        background-color: #3e3a39;
+        color: #fff;
+        border: 1px solid #3e3a39;
+        font-weight: bold;
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
+    }
+
+    /*その他バナースタンド｜ここまで*/
+</style>
+
+<div class="container">
+    <div id="overlay"></div>
+    <div class="editable" data-editable="shop_header_menu">{shop_header_menu}</div>
+    <div id="contents">
+        <div id="menu_left" class="editable" data-editable="shop_side_menu">{shop_side_menu}</div>
+
+        <div id="main" class="goods_main_area">
+            <?php if(preg_match('[smf]', $url)): ?>
+            <h1 class="item_h1 orange_h1 z-depth-1"><span>完全データ入稿</span>X バナー（ハトメタイプ）</h1>
+            <?php elseif(preg_match('[design]', $url)): ?>
+            <h1 class="item_h1 green_h1 z-depth-1"><span>制作依頼・見積り</span>X バナー（ハトメタイプ）</h1>
+            <?php endif; ?>
+
+            <!-- パンくずリスト｜ここから -->
+            <div class="nav-wrapper">
+                <div class="parent">
+                    <a href="/" class="">{bread_shop_name}</a><span>&gt;</span>
+                    <?php if(preg_match('[smf]', $url)): ?>
+                    <a href="/page/bannerstand_smf">【データ入稿】バナースタンド各種</a><span>&gt;</span>
+                    <div class="child">【データ入稿】X バナースタンド（ハトメタイプ）</div>
+                    <?php elseif(preg_match('[design]', $url)): ?>
+                    <a href="/page/bannerstand_design">【データ制作】バナースタンドスタンド各種</a><span>&gt;</span>
+                    <div class="child">【データ制作】X バナースタンド（ハトメタイプ）</div>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <!-- パンくずリスト｜ここまで -->
+
+            <img src="{img_path_shop}/cushion/xhatomebst_main_bn_2301.png" alt="X バナー（ハトメタイプ）" class="width-full" />
+            <p>Xバナースタンド（ハトメタイプ）は、角に付いたハトメ4点をスタンドについているフックに掛けて固定するバナースタンドです。</p>
+            <p>ハトメタイプのバナースタンドは、屋内用と屋内外兼用のスタンド2種類あります。屋内用のバナースタンドは、本体の重さ500gの軽量タイプもあり、持ち運びしやすいです。屋内外兼用のスタンドは、転倒対策としてスクリーンの大きさに対応した重さの注水台が付いているので安定感をお求めの方におすすめです。</p>
+            <div class="x_banner_detail_btn z-depth-1">
+                <a href="#list_of_x_banner"> <img src="{img_path_shop}/cushion/banner_icon.png" />X バナースタンド（ハトメタイプ）の一覧を見る </a>
+            </div>
+
+            <!--X バナー（ハトメタイプ）の特徴｜ここから-->
+            <h2 class="page_cushion_h2 z-depth-1 mt-4">X バナースタンド（ハトメタイプ）の特徴</h2>
+            <div class="row row--med-margin">
+                <div class="col s12 m6">
+                    <img src="{img_path_shop}/cushion/xhatomebst_point1.png" alt="X バナースタンド（ハトメタイプ）_ポイント1" class="width-full" />
+                </div>
+                <div class="col s12 m6">
+                    <div class="x_banner_features_title">スクリーンの張り替えが簡単！</div>
+                    <p class="mt-2">角についた4箇所のハトメを外して付けるだけでスクリーンの張り替えが可能です！<br />作業が簡単なので1人でも張り替えができます。フックに掛けて固定するため印刷面にハリが出てデザインが見やすくなっています。</p>
+                </div>
+            </div>
+            <div class="row row--med-margin">
+                <div class="col s12 m6">
+                    <img src="{img_path_shop}/cushion/xhatomebst_point2.png" alt="X バナースタンド（ハトメタイプ）_ポイント2" class="width-full" />
+                </div>
+                <div class="col s12 m6">
+                    <div class="x_banner_features_title">スクリーンに選べる3生地！</div>
+                    <p class="mt-2">用途に合わせて選択できる3生地をご用意しています！<br />テトロンポンジは旗によく使われ短期利用におすすめです。ターポリンはビニールのような厚手の生地で、防炎加工済なので屋外使用におすすめです。合成紙（マットラミ）は3生地の中で上品な光沢感があり、写真や画像を印刷される方におすすめです。</p>
+                </div>
+            </div>
+            <div class="row row--med-margin">
+                <div class="col s12 m6">
+                    <img src="{img_path_shop}/cushion/xhatomebst_point3.png" alt="X バナースタンド（ハトメタイプ）_ポイント3" class="width-full" />
+                </div>
+                <div class="col s12 m6">
+                    <div class="x_banner_features_title">屋内・屋外使用可能！</div>
+                    <p class="mt-2">屋内外兼用B60、C80、WIDEタイプは屋内と屋外に使用可能です！注水式スタンドになるため風への耐久性が高い商品です。</p>
+                </div>
+            </div>
+            <div class="x_banner_detail_btn z-depth-1">
+                <a href="#list_of_x_banner"> <img src="{img_path_shop}/cushion/banner_icon.png" />X バナースタンド（ハトメタイプ）の一覧を見る </a>
+            </div>
+            <!--X バナー（ハトメタイプ）の特徴｜ここまで-->
+
+            <!--X バナースタンド（ハトメタイプ）の主な用途｜ここから-->
+            <h2 class="page_cushion_h2 z-depth-1 mt-4">X バナースタンド（ハトメタイプ）の主な用途</h2>
+            <img src="{img_path_shop}/cushion/xhatomebst_usage.png" alt="X バナースタンド（ハトメタイプ）の主な用途" class="width-full hide-on-small-only" />
+            <img src="{img_path_shop}/cushion/xhatomebst_usage_sp.png" alt="X バナースタンド（ハトメタイプ）の主な用途" class="width-full hide-on-med-and-up" />
+            <p class="mt-2">
+                Xバナースタンド（ハトメタイプ）は設置やスクリーンの交換も簡単です。季節のイベントやキャンペーンの告知、展示会など用途に合わせて、内容の違うバナースタンド利用できます。看板や経路案内などの用途では、屋外向けのバナースタンドもよく使われています。のぼりキングで扱うバナースタンドの中で一番コンパクトに飾ることができる商品もあるためスペースのない店内などにおすすめです。
+            </p>
+            <!--X バナースタンド（ハトメタイプ）の主な用途｜ここまで-->
+
+            <!--X バナースタンド（ハトメタイプ）の商品一覧｜ここから-->
+            <h2 class="page_cushion_h2 z-depth-1 mt-4" id="list_of_x_banner">X バナースタンド（ハトメタイプ）の商品一覧</h2>
+            <div class="right-align">※モデル身長：160cm</div>
+            <div class="row goods_type_box variable">
+                <div class="col s12 m4 l4">
+                    <!--XバナースタンドS（450mm幅）-->
+                    <div class="goods_type">
+                        <a href="/goods/<?= $ship_link['X450'] ?>">
+                            <img src="{img_path_shop}/cushion/item_Xbannerstand450.png" alt="XバナースタンドS（450mm幅）" />
+                            <div class="color-tag-wrap">
+                                <span class="light-blue-tag">屋内</span>
+                                <span class="light-yellow-tag">片面</span>
+                                <span class="light-grey-tag">生地が選べる</span>
+                                <span class="bold-grey-tag">収納バッグ付き</span>
+                                <span class="light-green-tag">生地交換OK</span>
+                                <span class="normal-grey-tag">1人で組立</span>
+                            </div>
+                            <div class="banner_title">XバナースタンドS（450mm幅）</div>
+                            <p class="goods_explain_txt">しっかりとした骨組みで支えます。のぼりキングで扱うバナースタンドの中で最もコンパクト。</p>
+                            <div class="price_btn_wrapper">
+                                <div class="price_txt center-align"><span>税込</span>10,230<span>円～</span></div>
+                                <div class="mt-3">
+                                    <div class="btn waves-effect <?= $goods_color ?>_btn product_detail">見積り・ご注文はこちら</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--XバナースタンドS（450mm幅）-->
+                </div>
+
+                <div class="col s12 m4 l4">
+                    <!--タイプS-->
+                    <div class="goods_type">
+                        <a href="/goods/<?= $ship_link['typeS'] ?>">
+                            <img src="{img_path_shop}/cushion/item_typeS.png" alt="タイプS" />
+                            <div class="color-tag-wrap">
+                                <span class="light-red-tag">安価</span>
+                                <span class="light-blue-tag">屋内</span>
+                                <span class="light-yellow-tag">片面</span>
+                                <span class="light-grey-tag">生地が選べる</span>
+                                <span class="bold-grey-tag">収納バッグ付き</span>
+                                <span class="light-green-tag">生地交換OK</span>
+                                <span class="normal-grey-tag">1人で組立</span>
+                            </div>
+                            <div class="banner_title">タイプS</div>
+                            <p class="goods_explain_txt">下部が地面についています。デザインを全面的に見せたい場合におすすめ。</p>
+                            <div class="price_btn_wrapper">
+                                <div class="price_txt center-align"><span>税込</span>6,130<span>円～</span></div>
+                                <div class="mt-3">
+                                    <div class="btn waves-effect <?= $goods_color ?>_btn product_detail">見積り・ご注文はこちら</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--タイプS-->
+                </div>
+
+                <div class="col s12 m4 l4">
+                    <!--XバナースタンドS（600mm幅）-->
+                    <div class="goods_type">
+                        <a href="/goods/<?= $ship_link['X600'] ?>">
+                            <img src="{img_path_shop}/cushion/item_Xbannerstand600.png" alt="XバナースタンドS（600mm幅）" />
+                            <div class="color-tag-wrap">
+                                <span class="light-blue-tag">屋内</span>
+                                <span class="light-yellow-tag">片面</span>
+                                <span class="light-grey-tag">生地が選べる</span>
+                                <span class="bold-grey-tag">収納バッグ付き</span>
+                                <span class="light-green-tag">生地交換OK</span>
+                                <span class="normal-grey-tag">1人で組立</span>
+                            </div>
+                            <div class="banner_title">XバナースタンドS（600mm幅）</div>
+                            <p class="goods_explain_txt">しっかりとした骨組みで支えます。ハトメ式で生地の取り付けも簡単です。</p>
+                            <div class="price_btn_wrapper">
+                                <div class="price_txt center-align"><span>税込</span>11,040<span>円～</span></div>
+                                <div class="mt-3">
+                                    <div class="btn waves-effect <?= $goods_color ?>_btn product_detail">見積り・ご注文はこちら</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--XバナースタンドS（600mm幅）-->
+                </div>
+            </div>
+
+            <!--注水台・屋外設置OKタイプ|ここから-->
+            <h3 class="page_cushion_h3">注水台・屋外設置OKタイプ</h3>
+            <div class="row goods_type_box variable">
+                <div class="col s12 m4 l4">
+                    <!--屋内外兼用 B60-->
+                    <div class="goods_type">
+                        <a href="/goods/<?= $ship_link['B60'] ?>">
+                            <img src="{img_path_shop}/cushion/item_B60.png" alt="屋内外兼用 B60" />
+                            <div class="color-tag-wrap">
+                                <span class="bold-blue-tag">屋内外</span>
+                                <span class="bold-green-tag">両面</span>
+                                <span class="light-grey-tag">生地が選べる</span>
+                                <span class="light-green-tag">生地交換OK</span>
+                                <span class="normal-grey-tag">1人で組立</span>
+                            </div>
+                            <div class="banner_title">屋内外兼用 B60</div>
+                            <p class="goods_explain_txt mb-0">生地を2枚使用すると両面に設置することが可能です。</p>
+                            <div class="price_btn_wrapper">
+                                <div class="price_txt center-align"><span>税込</span>16,250<span>円～</span></div>
+                                <div class="mt-3">
+                                    <div class="btn waves-effect <?= $goods_color ?>_btn product_detail">見積り・ご注文はこちら</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--屋内外兼用 B60-->
+                </div>
+
+                <div class="col s12 m4 l4">
+                    <!--屋内外兼用 C80-->
+                    <div class="goods_type">
+                        <a href="/goods/<?= $ship_link['C80'] ?>">
+                            <img src="{img_path_shop}/cushion/item_C80.png" alt="屋内外兼用 C80" />
+                            <div class="color-tag-wrap">
+                                <span class="bold-blue-tag">屋内外</span>
+                                <span class="light-yellow-tag">片面</span>
+                                <span class="light-grey-tag">生地が選べる</span>
+                                <span class="light-green-tag">生地交換OK</span>
+                                <span class="normal-grey-tag">1人で組立</span>
+                            </div>
+                            <div class="banner_title">屋内外兼用 C80</div>
+                            <p class="goods_explain_txt mb-0">注水式のスタンドで安定感抜群。屋外イベントにも。</p>
+                            <div class="price_btn_wrapper">
+                                <div class="price_txt center-align"><span>税込</span>20,220<span>円～</span></div>
+                                <div class="mt-3">
+                                    <div class="btn waves-effect <?= $goods_color ?>_btn product_detail">見積り・ご注文はこちら</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--屋内外兼用 C80-->
+                </div>
+
+                <div class="col s12 m4 l4">
+                    <!--屋内外兼用 WIDE-->
+                    <div class="goods_type">
+                        <a href="/goods/<?= $ship_link['WIDE'] ?>">
+                            <img src="{img_path_shop}/cushion/item_WIDE.png" alt="屋内外兼用 WIDE" />
+                            <div class="color-tag-wrap">
+                                <span class="light-red-tag">安価</span>
+                                <span class="bold-blue-tag">屋内外</span>
+                                <span class="light-yellow-tag">片面</span>
+                                <span class="light-grey-tag">生地が選べる</span>
+                                <span class="light-green-tag">生地交換OK</span>
+                                <span class="normal-grey-tag">1人で組立</span>
+                            </div>
+                            <div class="banner_title">屋内外兼用 WIDE</div>
+                            <p class="goods_explain_txt mb-0">のぼりキングで扱う屋外使用が可能なバナースタンド中で最も大きいサイズ。注水式スタンドで安定感抜群。</p>
+                            <div class="price_btn_wrapper">
+                                <div class="price_txt center-align"><span>税込</span>25,065<span>円～</span></div>
+                                <div class="mt-3">
+                                    <div class="btn waves-effect <?= $goods_color ?>_btn product_detail">見積り・ご注文はこちら</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--屋内外兼用 WIDE-->
+                </div>
+            </div>
+            <!--注水台・屋外設置OKタイプ|ここまで-->
+
+            <!--X バナー（ハトメタイプ）の商品一覧｜ここまで-->
+
+            <!--屋外でも使える「屋内外兼用B60」は表と裏（うしろ）の両面でアピールすることができます！|ここから-->
+            <div class="row both_sides_box">
+                <div class="col s12 m8 l9">
+                    <div class="both_sides_box_title"><img src="{img_path_shop}/form/onepoint_icon_blue.png" />屋外でも使える「屋内外兼用B60」は<br />表と裏（うしろ）の両面でアピールすることができます！</div>
+                    <p class="both_sides_box_wrapper">
+                        「屋内外兼用 B60」は、<span class="marker_text">スクリーンを２枚表面と裏面（うしろ）に設置</span>することができます。<span class="marker_text">同じデザインを表裏で</span>見せたり、<span class="marker_text">異なるデザインを取り付けて1台で2種類のPR</span>をすることができます！<br />もちろん片面のみでの使用も可能！
+                    </p>
+                </div>
+                <div class="col s12 m4 l3">
+                    <img src="{img_path_shop}/cushion/xhatomebst_b60pickup.png" alt="屋内外兼用B60_両面" class="width-full both_sides_img" />
+                </div>
+            </div>
+            <!--屋外でも使える「屋内外兼用B60」は表と裏（うしろ）の両面でアピールすることができます！|ここまで-->
+
+            <!--X バナースタンド（ハトメタイプ）の価格・サイズ表｜ここから-->
+            <h2 class="page_cushion_h2 z-depth-1 mt-4">X バナースタンド（ハトメタイプ）の価格・サイズ表</h2>
+            <div class="price_table_scroll shortsize_table_scroll">
+                <table class="banner_price_size_table shortsize_table">
+                    <thead>
+                        <tr class="table_tr_name">
+                            <th rowspan="2">商品名</th>
+                            <th colspan="2">生地サイズ</th>
+                            <th colspan="2" rowspan="2">生地／器具セット価格(税込)</th>
+                        </tr>
+                        <tr>
+                            <th class="blue_cell">横幅 (mm)</th>
+                            <th>高さ (mm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table_tr_name">
+                            <th rowspan="3">XバナースタンドS<br />（450mm 幅）</th>
+                            <td rowspan="3">W450</td>
+                            <td rowspan="3">H1600</td>
+                            <td>テトロンポンジ</td>
+                            <td>10,230円</td>
+                        </tr>
+                        <tr>
+                            <td class="grey_cell">合成紙</td>
+                            <td class="grey_cell">13,475円</td>
+                        </tr>
+                        <tr>
+                            <td>ターポリン</td>
+                            <td>11,440円</td>
+                        </tr>
+                        <tr class="table_tr_name">
+                            <th rowspan="3">タイプS</th>
+                            <td rowspan="3">W600</td>
+                            <td rowspan="3">H1600</td>
+                            <td class="grey_cell">テトロンポンジ</td>
+                            <td class="grey_cell">6,130円</td>
+                        </tr>
+                        <tr>
+                            <td>合成紙</td>
+                            <td>8,880円</td>
+                        </tr>
+                        <tr>
+                            <td class="grey_cell">ターポリン</td>
+                            <td class="grey_cell">6,790円</td>
+                        </tr>
+                        <tr class="table_tr_name">
+                            <th rowspan="3">XバナースタンドS<br />（600mm 幅）</th>
+                            <td rowspan="3">W600</td>
+                            <td rowspan="3">H1800</td>
+                            <td>テトロンポンジ</td>
+                            <td>11,040円</td>
+                        </tr>
+                        <tr>
+                            <td class="grey_cell">合成紙</td>
+                            <td class="grey_cell">13,900円</td>
+                        </tr>
+                        <tr>
+                            <td>ターポリン</td>
+                            <td>11,700円</td>
+                        </tr>
+                        <tr class="table_tr_name">
+                            <th rowspan="3">屋内外兼用 B60</th>
+                            <td rowspan="3">W650</td>
+                            <td rowspan="3">H2000</td>
+                            <td class="grey_cell">トロマット</td>
+                            <td class="grey_cell">16,250円</td>
+                        </tr>
+                        <tr>
+                            <td>合成紙</td>
+                            <td>17,790円</td>
+                        </tr>
+                        <tr>
+                            <td class="grey_cell">ターポリン</td>
+                            <td class="grey_cell">16,800円</td>
+                        </tr>
+                        <tr class="table_tr_name">
+                            <th rowspan="3">屋内外兼用 C80</th>
+                            <td rowspan="3">W800</td>
+                            <td rowspan="3">H1800</td>
+                            <td>トロマット</td>
+                            <td>20,220円</td>
+                        </tr>
+                        <tr>
+                            <td class="grey_cell">合成紙</td>
+                            <td class="grey_cell">21,870円</td>
+                        </tr>
+                        <tr>
+                            <td>ターポリン</td>
+                            <td>20,770円</td>
+                        </tr>
+                        <tr class="table_tr_name">
+                            <th rowspan="3">屋内外兼用 WIDE</th>
+                            <td rowspan="3">W1000</td>
+                            <td rowspan="3">H2000</td>
+                            <td class="grey_cell">トロマット</td>
+                            <td class="grey_cell">25,065円</td>
+                        </tr>
+                        <tr>
+                            <td>合成紙</td>
+                            <td>26,715円</td>
+                        </tr>
+                        <tr>
+                            <td class="grey_cell">ターポリン</td>
+                            <td class="grey_cell">25,615円</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img src="{img_path_shop}/cushion/parkingp_price_scroll.png" class="table_scroll_img shortsize_table_img" />
+            </div>
+            <!--X バナー（ハトメタイプ）の価格・サイズ表｜ここまで-->
+
+            <!--器具が壊れた…｜ここから-->
+            <div class="row banner_fixtures_box">
+                <div class="col s12 m8 l9">
+                    <div class="banner_fixtures_title"><img src="{img_path_shop}/form/onepoint_icon_blue.png" />器具が壊れた…そんな時は器具の単品購入がおすすめです！</div>
+                    <div class="row banner_fixtures_wrapper">
+                        <div class="col s12 m12 l7 pl-4">一部商品は器具のみも販売しております。<br />器具の買い替えはこちらから。</div>
+                        <div class="col s12 m12 l5">
+                            <div class="banner_fixtures_list">
+                                <a href="/categ/8597">バナースタンド器具一覧</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4 l3">
+                    <img src="{img_path_shop}/page/bnst_Installation_kigu.png" alt="各種取り付け器具" class="banner_fixtures_img" />
+                </div>
+            </div>
+            <!--器具が壊れた…｜ここまで-->
+
+            <!--その他バナースタンド｜ここから-->
+            <h2 class="page_cushion_h2 z-depth-1 mt-4">その他バナースタンド</h2>
+            <div class="row goods_type_box row--med-margin row--align-height">
+                <div class="col s12 m4 l4">
+                    <!--バッグパネル-->
+                    <div class="good_type_wrapper">
+                        <a href="/page/<?= $back_panel_link ?>">
+                            <div class="good_type_title">バッグパネル</div>
+                            <div class="goods_type_padding">
+                                <img src="{img_path_shop}/cushion/bnts_type_backpanel_2211.png" alt="バッグパネル" class="width-full" />
+                                <p class="goods_type_paragraph three-text">インタビューボードや背景として利用される特に大型のバナースタンドです。</p>
+                                <div class="price_txt center-align"><span>税込</span>16,940<span class="enn-text">円</span></div>
+                                <div class="go-to-type-list-btn">このタイプの一覧を見る</div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--バッグパネル-->
+                </div>
+
+                <div class="col s12 m4 l4">
+                    <!--展張式スタンド-->
+                    <div class="good_type_wrapper">
+                        <a href="/page/<?= $expansion_banner_link ?>">
+                            <div class="good_type_title">展張式スタンド</div>
+                            <div class="goods_type_padding">
+                                <img src="{img_path_shop}/cushion/bnts_type_tencyou.png" alt="展張式スタンド" class="width-full" />
+                                <p class="goods_type_paragraph">のぼりキングで扱うバナースタンドの中で、最も安価で軽量なタイプです。そのため屋内の使用におすすめです。</p>
+                                <div class="price_txt center-align"><span>税込</span>6,010<span class="enn-text">円</span></div>
+                                <div class="go-to-type-list-btn">このタイプの一覧を見る</div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--展張式スタンド-->
+                </div>
+
+                <div class="col s12 m4 l4">
+                    <!--ロールアップバナー-->
+                    <div class="good_type_wrapper">
+                        <a href="/page/<?= $rollup_banner_link ?>">
+                            <div class="good_type_title">ロールアップバナー</div>
+                            <div class="goods_type_padding">
+                                <img src="{img_path_shop}/cushion/bnts_type_roll_2211.png" alt="ロールアップバナー" class="width-full" />
+                                <p class="goods_type_paragraph">引き出すだけで設置が簡単です。厚めの生地が選べるので耐久性重視の場合におすすめです。室内での使用がメインです。</p>
+                                <div class="price_txt center-align"><span>税込</span>16,080<span class="enn-text">円</span></div>
+                                <div class="go-to-type-list-btn">このタイプの一覧を見る</div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--ロールアップバナー-->
+                </div>
+            </div>
+            <!--その他バナースタンド｜ここまで-->
+
+            {shop_footer}
+        </div>
+        <!-- main/ -->
+    </div>
+    <!-- contents/ -->
+</div>
+<!-- container/ -->
+
+{js} {custom_js} {shop_js}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+    $(window).load(function () {
+        const shortsizetablescroll = $('.shortsize_table').offset().left;
+        $('.shortsize_table_scroll').scroll(function () {
+            let scroll = $(this).scrollLeft();
+            if (scroll >= shortsizetablescroll) {
+                $('.shortsize_table_img').addClass('hidden');
+            }
+        });
+    });
+</script>

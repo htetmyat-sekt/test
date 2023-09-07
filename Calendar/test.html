@@ -1,0 +1,205 @@
+<?php
+    function JapaneseYear($year) { // 和暦計算
+        $eras = [
+            ['year' =>
+2018, 'name' => '令和'], ['year' => 1988, 'name' => '平成'], ['year' => 1925, 'name' => '昭和'], ['year' => 1911, 'name' => '大正'], ['year' => 1867, 'name' => '明治'] ]; foreach($eras as $era) { $base_year = $era['year']; $era_name = $era['name']; if($year > $base_year) { $era_year = $year - $base_year; if($era_year === 1) { return $era_name .'元'; } return
+$era_name . $era_year; } } return null; } $WesternYear = date('Y',strtotime('-17 years')); $CurrentYear = date('Y'); // 西暦 $ElementarySchool = $WesternYear + 7; $MiddleSchool = $MiddleSchool + 4; $HighSchool = $HighSchool + 3; $University = $HighSchool + 3; $UniversitySecondYear = $University + 1; $UniversityThiredYear = $UniversitySecondYear + 1;
+$UniversityFouthYear = $UniversityThiredYear + 1; $counter = 0; $counter = 0; ?>
+
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <title>入学・卒業年度｜学歴早見表｜{meta_title_other}</title>
+        <meta name="description" content="生まれ年を確認するだけで、小学校入学から大学卒業までの学歴を見ることができる学歴早見表です。学歴を履歴書に記載する時によく浮かぶ「学歴はどこから記載するのか」「和暦・西暦どちらで書くのか」なども解説しています。" />
+        <meta name="keywords" content="{meta_keywords_other}" />
+        <!-- パンくずJSON-LD｜ここから -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "{bread_shop_name}",
+                        "item": "{base_url}/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "入学・卒業年度｜学歴早見表"
+                    }
+                ]
+            }
+        </script>
+        <!-- パンくずJSON-LD｜ここまで -->
+        {custom_header} {shop_header} {custom_css} {shop_css}
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" />
+        <style>
+            .table {
+                height: 500px;
+                overflow-y: scroll;
+            }
+
+            .chart {
+                width: 135%;
+            }
+
+            .color-table > tbody > th:nth-child(2),
+            td:first-child,
+            th:nth-child(3),
+            td:nth-child(2),
+            td:nth-child(3),
+            .chart > tbody > th:nth-child(1),
+            .chart > tbody > th:nth-child(2),
+            .chart > tbody > th:nth-child(3),
+            .chart > tbody > th:nth-child(4),
+            .chart > tbody > th:nth-child(5),
+            .chart > tbody > th:nth-child(6),
+            .chart > tbody > th:nth-child(7),
+            .chart > tbody > th:nth-child(8),
+            .chart > tbody > td:nth-child(2),
+            .chart > tbody > td:nth-child(3),
+            .chart > tbody > td:nth-child(4),
+            .chart > tbody > td:nth-child(5),
+            .chart > tbody > td:nth-child(6),
+            .chart > tbody > td:nth-child(7),
+            .chart > tbody > td:nth-child(8) {
+                width: 12.5%;
+            }
+            .chart th {
+                position: sticky;
+                top: -1px;
+                left: 0;
+                background: #c9caca;
+            }
+            .chart th:first-child {
+                color: #ffffff;
+                background: #74b2d5;
+            }
+
+            .chart td {
+                padding: 6px 5px;
+            }
+
+            .current {
+                margin-bottom: 1em;
+                padding: 0.1em 0.5rem;
+                border: 1px solid #3e3a39;
+                border-radius: 8px;
+            }
+
+            .current p {
+                font-size: large;
+                font-weight: bold;
+            }
+
+            .head_row {
+                background-color: #c9caca;
+            }
+        </style>
+    </head>
+
+    <body>
+        {shop_body_start}
+        <div class="container">
+            <div id="overlay"></div>
+            <div class="editable" data-editable="shop_header_menu">{shop_header_menu}</div>
+            <div id="contents">
+                <div id="menu_left" class="editable" data-editable="shop_side_menu">{shop_side_menu}</div>
+                <div id="main">
+                    <div class="link_wrap"><a href="/">{bread_shop_name}</a> > <span class="link_bold">入学・卒業年度早見表</span></div>
+
+                    <h1 class="page_h1 z-depth-1 mb-3 mt-1">入学・卒業年度早見表</h1>
+                    <p>就職活動やアルバイト面接などで履歴書に記載する学歴の早見表です。和暦・西暦どちらとも記載していますので履歴書を作成する際にお役立てください。</p>
+                    <div class="current center">
+                        <p>※早生まれ（毎年1月～3月生まれ）の場合は前年度の欄を確認してください。<br />※卒業は3月、入学は4月として記載しています。</p>
+                    </div>
+                    <div class="table">
+                        <table class="chart">
+                            <tr class="head_row">
+                                <th>生まれ年</th>
+                                <th>小学校入学</th>
+                                <th>小学校卒業<br />中学校入学</th>
+                                <th>中学校卒業<br />高等学校入学</th>
+                                <th>高等学校卒業<br />大学入学</th>
+                                <th>2年制大学卒業</th>
+                                <th>3年制大学卒業</th>
+                                <th>4年制大学卒業</th>
+                            </tr>
+                            <!-- ループ -->
+                            <?php while($counter < 61) { ?>
+                            <tr>
+                                <td>
+                                    <?= $WesternYear - ($counter - 1) ?>年<br />
+                                    （<?= JapaneseYear($WesternYear - ($counter - 1)) ?>年）
+                                </td>
+                                <td>
+                                    <?= $ElementarySchool ?>年<br />
+                                    （<?= JapaneseYear($ElementarySchool) ?>年）
+                                </td>
+                                <td>
+                                    <?= $WesternYear - ($counter - 1) + 13 ?>年<br />
+                                    （<?= JapaneseYear($WesternYear - ($counter - 1) + 13) ?>年）
+                                </td>
+                                <td>
+                                    <?= $WesternYear - ($counter - 1) + 16 ?>年<br />
+                                    （<?= JapaneseYear($WesternYear - ($counter - 1) + 16) ?>年）
+                                </td>
+                                <td>
+                                    <?= $WesternYear - ($counter - 1) + 19 ?>年<?php if ($WesternYear - ($counter - 1) + 19 >
+                                    $CurrentYear) : ?>予定<?php endif ?><br />
+                                    （<?= JapaneseYear($WesternYear - ($counter - 1) + 19) ?>年<?php if ($WesternYear - ($counter - 1) + 19 >
+                                    $CurrentYear) : ?>予定<?php endif ?>）
+                                </td>
+                                <td>
+                                    <?= $WesternYear - ($counter - 1) + 21 ?>年<?php if ($WesternYear - ($counter - 1) + 21 >
+                                    $CurrentYear) : ?>予定<?php endif ?><br />
+                                    （<?= JapaneseYear($WesternYear - ($counter - 1) + 21) ?>年<?php if ($WesternYear - ($counter - 1) + 21 >
+                                    $CurrentYear) : ?>予定<?php endif ?>）
+                                </td>
+                                <td>
+                                    <?= $WesternYear - ($counter - 1) + 22 ?>年<?php if ($WesternYear - ($counter - 1) + 22 >
+                                    $CurrentYear) : ?>予定<?php endif ?><br />
+                                    （<?= JapaneseYear($WesternYear - ($counter - 1) + 22) ?>年<?php if ($WesternYear - ($counter - 1) + 22 >
+                                    $CurrentYear) : ?>予定<?php endif ?>）
+                                </td>
+                                <td>
+                                    <?= $WesternYear - ($counter - 1) + 23 ?>年<?php if ($WesternYear - ($counter - 1) + 23 >
+                                    $CurrentYear) : ?>予定<?php endif ?><br />
+                                    （<?= JapaneseYear($WesternYear - ($counter - 1) + 23) ?>年<?php if ($WesternYear - ($counter - 1) + 23 >
+                                    $CurrentYear) : ?>予定<?php endif ?>）
+                                </td>
+                            </tr>
+                            <?php $counter++; ?>
+                            <?php } ?>
+                            <!-- ここまで -->
+                        </table>
+                    </div>
+
+                    <h2 class="page_h2 z-depth-1 mt-5">学歴はどこから履歴書に書けばいい？</h2>
+                    <p>
+                        履歴書にどこから学歴を記載するかは明確に決まっていません。新卒の場合は「高等学校入学」の義務教育を除く時期から記載することが多く、転職の履歴書では「高等学校卒業」から記載することが多いようです。企業によってはどこから記載するか指示される場合があるので、事前に確認するといいでしょう。<br />
+                        また、いずれの場合も「高校」と省略して記載するのではなく、「高等学校」と正式名称で記載しましょう。学部やコース、専攻なども記載漏れがないように心がけてください。
+                    </p>
+
+                    <h2 class="page_h2 z-depth-1 mt-5">履歴書は和暦・西暦どちらで書く？</h2>
+                    <p>
+                        履歴書を提出する先の企業などから指定がない場合は、基本的にどちらで記載しても問題ないとされています。企業によっては記載が指定されている場合があるため、履歴書を作成する前に確認しておくといいでしょう。<br />
+                        履歴書の中で和暦と西暦が混ざってしまうと担当者にとって年度が分かりにくくなってしまうため、生年月日と学歴・職歴欄、資格などの項目は統一するようにしましょう。
+                    </p>
+                    <p>また、元号が切り替わった際の和暦は「平成元年」「令和元年」と記載するようにしましょう。2019年5月1日から令和となり、「令和2年」は2020年1月1日からとなりますので元号が切り替わる際は注意が必要です。</p>
+                    <img src="{img_path_shop}/page/calendar_rirekisho.png" alt="履歴書の作成について_和暦・西暦" class="width-full mb-3" />
+
+                    {shop_info} {shop_footer}
+                </div>
+                <!-- main/ -->
+            </div>
+            <!-- contents/ -->
+        </div>
+        <!-- container/ -->
+        {js} {custom_js} {shop_js}
+    </body>
+</html>
